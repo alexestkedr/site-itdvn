@@ -1,0 +1,22 @@
+
+/*  Подключил ЛОКАЛЬНО шрифты @font-face к себе на страницу  */
+
+@font-face{
+font-family: 'Maven Pro';
+src: url("fonts/'Maven Pro'") ;
+}
+
+@font-face{
+font-family: Lobster;
+src: url("fonts/Lobster") ;
+}
+
+
+
+h1{
+	color: lime;
+}
+
+span{
+	color:green;
+}
