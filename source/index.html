@@ -2,28 +2,61 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-    <title>First project Landing itdvn</title>
+    <title>Business Landing</title>
     <meta name="author" content="Alex Papiev">
     <meta name="description" content="Мой первый сайт как разработчика">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/Promo_FS.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icons/like.png" type="image/x-icon">
     <link rel="stylesheet" href="libs/font-awesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="header">
 
-    <h1>hello again</h1>
+        <div class="header__top">
+            <div class="container"><!-- нужен блок для центровки -->
+                <div class="contacts">
+                    <a href="tel:+372 56948572" class="contact">
+                         <i class="fas fa-mobile-alt"></i>
+                    </a><!-- по клику на ссылку вызвать приложение для звонков -->
+                    <span class="contact__text">+372 56948572</span>
 
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam voluptatibus sapiente, animi officiis mollitia cumque et sequi, quidem atque eveniet error id nisi est aliquam consectetur, quia maxime aspernatur ea.</p>
-    <p>dfksdkfd
-        <p>gfhgfhgfhfgh</p>
-        <p>f,sdmfd</p>
+                    <a href="mailto:info@business.com" class="contact">
+                         <i class="fas fa-envelope"></i>
+                    </a><!-- по клику на ссылку вызвать приложение для отправки email-->
+                    <span class="contact__text">info@business.com</span>
+                </div><!-- end contacts -->
+
+                    <a href="facebook.com" class="facebook-icon">
+                         <i class="fab fa-facebook-square"></i>
+                    </a> <!-- возможно эту ссылку нужно в div "contacts" засунуть -->
+            </div><!-- end container -->
+            
+        </div><!-- end Header__top -->
+
+        <div class="container">
+            <div class="header__bottom">
+                <div class="logo">
+                    <img src="images/logo.png" class="logo__picture"  alt="Logo">
+                </div>
+
+                <nav class="nav">
+                    <a href="#" class="nav__link">Home</a>
+                    <a href="#" class="nav__link">About Us</a>
+                    <a href="#" class="nav__link">Our Approach</a>
+                    <a href="#" class="nav__link">Our Work</a>
+                </nav>
+
+                <a href="#" class="button header__button button-red">Free Consultation</a>
+            
+            </div><!-- end Header__bottom -->
+        </div>
 
 
+    </header><!-- end Header -->
 
-	<p>fff</p>
+
 
 </body>
 </html>
