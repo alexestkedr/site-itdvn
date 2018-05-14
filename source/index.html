@@ -17,23 +17,25 @@
         <div class="header__top">
             <div class="container"><!-- нужен блок для центровки -->
                 <div class="contacts">
-                    <a href="tel:+372 56948572" class="contact">
-                         <i class="fas fa-mobile-alt"></i>
-                    </a><!-- по клику на ссылку вызвать приложение для звонков -->
-                    <span class="contact__text">+372 56948572</span>
 
-                    <a href="mailto:info@business.com" class="contact">
-                         <i class="fas fa-envelope"></i>
-                    </a><!-- по клику на ссылку вызвать приложение для отправки email-->
-                    <span class="contact__text">info@business.com</span>
+                    <a class="contact" href="tel:+372 56948572">
+                         <i class="fas fa-mobile-alt contact__icon icon-email-mob  "></i>
+                         <span class="contact__text icon-mob">+372 56948572</span>
+                    </a><!-- в дальнейшем по клику на ссылку можно будет вызвать приложение для звонков -->
+                    
+
+                    <a class="contact" href="mailto:info@business.com">
+                         <i class="fas fa-envelope contact__icon icon-email-mob"></i>
+                         <span class="contact__text">info@business.com</span>
+                    </a><!-- по клику на ссылку можно будет вызвать приложение для отправки email-->
+                    
+                    <a class="facebook-icon" href="facebook.com">
+                         <i class="fab fa-facebook-f"></i>
+                    </a> 
+
                 </div><!-- end contacts -->
-
-                    <a href="facebook.com" class="facebook-icon">
-                         <i class="fab fa-facebook-square"></i>
-                    </a> <!-- возможно эту ссылку нужно в div "contacts" засунуть -->
             </div><!-- end container -->
-            
-        </div><!-- end Header__top -->
+        </div><!-- end header__top -->
 
         <div class="container">
             <div class="header__bottom">
@@ -42,7 +44,7 @@
                 </div>
 
                 <nav class="nav">
-                    <a href="#" class="nav__link">Home</a>
+                    <a href="#" class="nav__link nav__link-active">Home</a>
                     <a href="#" class="nav__link">About Us</a>
                     <a href="#" class="nav__link">Our Approach</a>
                     <a href="#" class="nav__link">Our Work</a>

@@ -1,2 +1,150 @@
+/*  Подключил ЛОКАЛЬНО шрифты @font-face к себе 
+на страницу  */
 
-/*  Подключил ЛОКАЛЬНО шрифты @font-face к себе на страницу  */
+@font-face{
+	font-family: 'georgia-bold';
+	src:url('../fonts/georgia-bold.woff'),
+	url('../fonts/georgia-bold.woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'helvetica-neue-regular';
+	src:url('../fonts/helvetica-neue-regular.woff'),
+	url('../fonts/helvetica-neue-regular.woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'helvetica-neue-bold';
+	src:url('../fonts/helvetica-neue-bold.woff'),
+	url('../fonts/helvetica-neue-bold.woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'helvetica-neue-light';
+	src:url('../fonts/helvetica-neue-light.woff'),
+	url('../fonts/helvetica-neue-light.woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+	font-family: 'helvetica-neue-light';
+	font-size: 1rem;
+	line-height: 1.2;	
+}
+
+html{ box-sizing:border-box;
+}
+
+/* все элементы наследуют значение свойства у родительского элемента*/
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+ul, ol{
+	list-style-type:none;
+}
+
+      
+/* центровщик container (нужен для центрирования) */
+.container{
+	max-width: 1024px;
+	margin:auto;
+}
+
+ /* buttons modules*/
+
+.button{
+	display: inline-block;
+	border-radius: 3px;
+	padding: 10px 22px 7px;
+	text-decoration: none;
+	color:white;
+}
+
+.button-red{
+	background-color:#de2b24;
+	transition: 0.3s;
+}
+
+.button-red:hover{
+	background-color:#FF3029 ;
+}
+
+.button-yellow{
+	background-color: #F8CD53;
+	
+}
+
+.button-yellow:hover{
+	background-color: #FFE568;
+
+}
+
+.text-uppercase{
+	text-transform: uppercase;
+}
+
+
+   /* header__top START */
+
+.header__top{
+    background-color:#f0f2f4;
+    border-bottom:1px solid #e2e2e2;	
+}
+
+.contacts{
+	text-align: right;
+}
+
+.contact{
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px 5px 8px;
+	color:#424242;
+	transition: 0.3s;
+	text-decoration: none;
+	
+}
+
+.contact:first-child{
+border-right: 1px solid #e2e2e2;
+}
+
+.contact:hover{
+color:#828282;
+text-decoration: underline;
+
+}
+
+.contact__icon{
+	margin-left: 13px;
+	font-size: 1.5rem; /*размер иконки*/
+	vertical-align: middle;
+}
+
+.icon-mob{
+	margin-right: 2px;
+	padding-right: 14px;
+}
+
+.icon-email-mob{
+	font-size: 1.2rem;
+
+}
+
+.facebook-icon{
+	display:inline-block;
+	margin:7px 0px;
+	padding:5px 8px 1px;
+	border-radius: 3px;
+	background-color: #1287BF;
+	color:white;
+
+}
