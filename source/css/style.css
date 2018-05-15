@@ -5,6 +5,12 @@
 /* ПРАВИЛО! псевдоклассы :after и :before по умолчанию строчные элементы.
 всегда делать их inline-block  */
 
+/* ПРАВИЛО! REM-величина всегда рассчитывается только от тега html. 
+По умолчанию у html font-size:16px
+если текст к примеру в фотошопе видим 26px, то чтобы высчитать
+в rem нужно 26px : 16px = 1.625rem ; 
+Вывод, что 1rem = 16px */
+
 
 /*  Подключил ЛОКАЛЬНО шрифты @font-face к себе 
 на страницу  */
@@ -211,4 +217,33 @@ text-decoration: underline;
 
 }
 
+/* section hero START*/
 
+.hero{
+	min-height: 590px;/* высота всего блока*/
+	padding-top: 174px;/* высота от верха до первой надписи*/
+	text-align:center;
+	color: white;
+	background:#ccc url(../images/hero-bg.jpg) center/cover no-repeat;
+}
+
+.hero__about{
+	font-family: helvetica-neue-bold;
+	font-size:3rem;
+	line-heigt:1;
+}
+
+.hero__title{
+	margin-top: 0; /*normalize дает тегу H1 внешние отступы. мы их убираем*/
+	margin-bottom: 27px; /*normalize дает тегу H1 внешние отступы. мы их корректируем*/
+	font-family: helvetica-neue-light;
+}
+
+.button-yellow-up{
+	padding:24px 40px;
+	border-radius: 8px;
+	font-size:1.5rem;
+	font-weight:bold;
+	letter-spacing: 2px;/* расстояние м/у буквами*/
+
+}
