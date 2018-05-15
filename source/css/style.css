@@ -1,3 +1,11 @@
+/* ПРАВИЛО! display: inline-block и vertical-align: top/middle;   
+должны работать в связке ВСЕГДА! 
+блоки ровнее становятся */
+
+/* ПРАВИЛО! псевдоклассы :after и :before по умолчанию строчные элементы.
+всегда делать их inline-block  */
+
+
 /*  Подключил ЛОКАЛЬНО шрифты @font-face к себе 
 на страницу  */
 
@@ -66,6 +74,7 @@ ul, ol{
 	padding: 10px 22px 7px;
 	text-decoration: none;
 	color:white;
+	font-family: 'helvetica-neue-regular';
 }
 
 .button-red{
@@ -148,3 +157,58 @@ text-decoration: underline;
 	color:white;
 
 }
+
+	/* header__bottom START */
+
+.header__bottom{
+	display: flex;
+	justify-content: space-between;
+	flex-frap: wrap;/* перенос блоков при уменьшении размера экрана */
+	align-items:center;/* центровка ссылок по вертикале */
+	padding: 41px 0 32px;/* чтобы весь блок стал больше */
+}
+
+
+.nav{
+	display: inline-block;/* чтобы отступы м.б.задать */
+	vertical-align: top; /* когда задаю inline-block всегда в связке прописывать vertical-align: top или middle */
+	padding-top: 7px;
+	margin-left: 90px;
+	
+}
+
+.nav__link{
+	display: inline-block;/* чтобы отступы м.б.задать */
+	vertical-align: top;/* когда задаю inline-block всегда в связке прописывать vertical-align: top или middle */
+	padding: 5px;
+	font-family: helvetica-neue-bold;
+	text-decoration:none;
+	color: #424242;
+	transition: 0.3s;/* чтобы при наведении на ссылку медленно сменялся цвет */
+
+}
+
+.nav__link:hover, .nav__link--active{
+	color: #de2b24;
+
+}
+/* делаем декортивные точки в меню */
+
+.nav__link:after{
+	content:'';
+	display: inline-block;
+	vertical-align: middle;
+	width: 5px;
+	height: 5px;
+	border-radius:50%;
+	background: #424242;
+	margin-left: 15px; 
+
+}
+/* у последнего элемента меню удалю декорат-ую точку */
+.nav__link:last-child:after{
+	display: none;
+
+}
+
+
