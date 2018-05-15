@@ -67,10 +67,12 @@ ul, ol{
 
       
 /* центровщик container (нужен для центрирования) */
+
 .container{
 	max-width: 1024px;
 	margin:auto;
 }
+
 
  /* buttons modules*/
 
@@ -217,7 +219,7 @@ text-decoration: underline;
 
 }
 
-/* section hero START*/
+	/* section hero START */
 
 .hero{
 	min-height: 590px;/* высота всего блока*/
@@ -239,11 +241,107 @@ text-decoration: underline;
 	font-family: helvetica-neue-light;
 }
 
-.button-yellow-up{
+.button-yellow--up{
 	padding:24px 40px;
 	border-radius: 8px;
 	font-size:1.5rem;
 	font-weight:bold;
 	letter-spacing: 2px;/* расстояние м/у буквами*/
 
+}
+
+	/* section about START */
+
+.about{
+	padding:99px 0 105px 0;
+	text-align:center;/* текст во всех длоках будет по центру*/
+}
+
+.about__list{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;flex-wrap: wrap;/*при уменьшении помогает с адаптивом */
+	margin:0;
+	padding:0 50px;
+	
+}
+
+.about__item{
+	width: 25%;/* ширина для блока */
+}
+
+.about__header{
+	margin:0 0 12px 0;
+	font-size:1.375rem;
+	font-family: helvetica-neue-bold;
+	color:#424242;
+
+}
+
+.about__description{
+	margin-top:0;/* убираем отстуры у абзацев по умолчанию */
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color:5c5c5c;
+
+}
+
+.title{
+	margin-bottom:65px;
+	text-align: center;
+}
+
+.title__header{
+	margin:0;/* убираем отстуры у абзацев по умлочанию */
+	font-size: 2.25rem;
+	font-family: helvetica-neue-bold;
+	line-height: 1;
+
+}
+
+.title__text{
+	font-size: 1.25rem;
+	font-family: helvetica-neue-light;
+}
+
+	/* делаем декоративное нижнее подчеркивание */
+
+.title--with-bottom-line{
+	position: relative; /* родит.блоку сделали relative,чтобы дочернему дать absolut */
+
+}
+
+.title--with-bottom-line:after{
+	position: absolute;
+	left:50%;/* выровнили по центру декоративную линию по горизонт*/
+	-webkit-transform: translateX(-50%);/* выровнили по центру декоративную линию по горизонт */
+	        transform: translateX(-50%);/* выровнили по центру декоративную линию по горизонт */
+	content: '';
+    bottom: -16px;/* опустили чуть ниже декоративную линию */
+    width: 47px;
+    height: 5px;
+    background: #424242;
+}
+	/* добовляем иконки */
+
+.icon{
+	margin:auto auto 23px auto;/* нижние отступы от картинки до h3 */
+}
+
+.icon-like{
+background-image: url(../images/icons/like.png);
+    width: 83px;
+    height: 79px;
+}
+
+.icon-book{
+	background-image: url(../images/icons/book.png);
+    width: 83px;
+    height: 79px;
+}
+
+.icon-message{
+	background-image: url(../images/icons/message.png);
+    width: 83px;
+    height: 79px;
 }
