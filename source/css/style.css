@@ -494,12 +494,6 @@ background-image: url(../images/icons/like.png);
     color: #fff;
 }
 
-/*делаем только для зеркальных отображений step2 и step4 блоков для каждого 2ого элемента*/
-.approch__step:nth-child(2n){
-	right:auto;
-	left:-52px;
-}
-
 .approch__title{
 	margin-bottom: 6px;
     font-size: 1.125rem;
@@ -511,3 +505,5 @@ background-image: url(../images/icons/like.png);
 	margin: 0;/*normalize дает внешние отступы тегу "p". мы их убираем*/
     line-height: 1.5;
 }
+
+		/* section Our Work START */
