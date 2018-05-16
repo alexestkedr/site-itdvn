@@ -2,8 +2,8 @@
 должны работать в связке ВСЕГДА! 
 блоки ровнее становятся */
 
-/* ПРАВИЛО! псевдоклассы :after и :before по умолчанию строчные элементы.
-всегда делать их inline-block  */
+/* ПРАВИЛО! псевдоклассы :after и :before по умолчанию дают строчные элементы.
+всегда делать их inline-block или block  */
 
 /* ПРАВИЛО! REM-величина всегда рассчитывается только от тега html. 
 По умолчанию у html font-size:16px
@@ -132,6 +132,8 @@ ul, ol{
 
 .contact:first-child{
 border-right: 1px solid #e2e2e2;
+
+
 }
 
 .contact:hover{
@@ -144,11 +146,13 @@ text-decoration: underline;
 	margin-left: 13px;
 	font-size: 1.5rem; /*размер иконки*/
 	vertical-align: middle;
+
 }
 
 .icon-mob{
 	margin-right: 2px;
 	padding-right: 14px;
+
 }
 
 .icon-email-mob{
@@ -189,7 +193,7 @@ text-decoration: underline;
 	display: inline-block;/* чтобы отступы м.б.задать */
 	vertical-align: top;/* когда задаю inline-block всегда в связке прописывать vertical-align: top или middle */
 	padding: 5px;
-	font-family: helvetica-neue-bold;
+	font-family: 'helvetica-neue-bold';
 	text-decoration:none;
 	color: #424242;
 	transition: 0.3s;/* чтобы при наведении на ссылку медленно сменялся цвет */
@@ -200,6 +204,8 @@ text-decoration: underline;
 	color: #de2b24;
 
 }
+
+
 /* делаем декортивные точки в меню */
 
 .nav__link:after{
@@ -230,7 +236,7 @@ text-decoration: underline;
 }
 
 .hero__about{
-	font-family: helvetica-neue-bold;
+	font-family: 'helvetica-neue-bold';
 	font-size:3rem;
 	line-heigt:1;
 }
@@ -238,7 +244,7 @@ text-decoration: underline;
 .hero__title{
 	margin-top: 0; /*normalize дает тегу H1 внешние отступы. мы их убираем*/
 	margin-bottom: 27px; /*normalize дает тегу H1 внешние отступы. мы их корректируем*/
-	font-family: helvetica-neue-light;
+	font-family: 'helvetica-neue-light';
 }
 
 .button-yellow--up{
@@ -255,6 +261,7 @@ text-decoration: underline;
 .about{
 	padding:99px 0 105px 0;
 	text-align:center;/* текст во всех длоках будет по центру*/
+
 }
 
 .about__list{
@@ -263,6 +270,7 @@ text-decoration: underline;
 	flex-wrap: wrap;flex-wrap: wrap;/*при уменьшении помогает с адаптивом */
 	margin:0;
 	padding:0 50px;
+
 	
 }
 
@@ -270,10 +278,12 @@ text-decoration: underline;
 	width: 25%;/* ширина для блока */
 }
 
+
+
 .about__header{
 	margin:0 0 12px 0;
 	font-size:1.375rem;
-	font-family: helvetica-neue-bold;
+	font-family: 'helvetica-neue-bold';
 	color:#424242;
 
 }
@@ -294,14 +304,14 @@ text-decoration: underline;
 .title__header{
 	margin:0;/* убираем отстуры у абзацев по умлочанию */
 	font-size: 2.25rem;
-	font-family: helvetica-neue-bold;
+	font-family: 'helvetica-neue-bold';
 	line-height: 1;
 
 }
 
 .title__text{
 	font-size: 1.25rem;
-	font-family: helvetica-neue-light;
+	font-family: 'helvetica-neue-light';
 }
 
 	/* делаем декоративное нижнее подчеркивание */
@@ -321,6 +331,7 @@ text-decoration: underline;
     width: 47px;
     height: 5px;
     background: #424242;
+
 }
 	/* добовляем иконки */
 
@@ -344,4 +355,159 @@ background-image: url(../images/icons/like.png);
 	background-image: url(../images/icons/message.png);
     width: 83px;
     height: 79px;
+}
+
+			/* section Approch START */
+
+
+.approch{
+	padding-top: 86px;
+	padding-bottom: 94px;
+	background-color:#f3f3f3;/*цвет дял всего блока*/
+
+}
+
+.approch__list{
+	margin:0;/*normalize дает внешние отступы. мы их убираем*/
+	padding: 0;/*normalize дает внешние отступы. мы их убираем*/
+	counter-reset: count; /*счетчик! чтобы цифры в красных квадратах по порядку шли*/
+
+}
+
+.approch__item{
+	margin-bottom:40px;/* расстония м/у всеми 4мя блоками*/
+	border-radius: 5px;
+	box-shadow:-1px -1px 10px 1px #d6d6d6;
+	color:#424242;
+	background: #fff;
+
+}
+
+/*делаем только для зеркальных отображений step2 и step4 блоков для каждого 2ого элемента*/
+.approch__item:nth-child(2n){
+	display: flex;
+    flex-direction: row-reverse;/*делает зеркальное отображение*/
+    text-align: right;
+
+
+}
+
+
+.approch__text{
+	display: inline-block;
+	vertical-align: top;
+	width:64%;/*чтобы блок подстраивался под ширину экрана*/
+	font-size: 0.875rem;
+	padding: 70px 70px 55px 90px;
+
+}
+
+/*делаем только для зеркальных отображений step2 и step4 блоков для каждого 2ого элемента*/
+.approch__text:nth-child(2n){
+	padding: 70px 90px;
+
+}	
+
+
+.approch__picture{
+	display: block;
+	width: 100%;/*чтобы картинка под свой блок подстраивалась*/
+	height: 100%;/*чтобы картинка под свой блок подстраивалась*/
+
+}
+
+
+.approch__image{
+	position: relative;/*родителю дал relative, тк красные квадраты будут относительно нее*/
+	max-width: 340px;
+	max-height:236px;
+	display: inline-block;/*чтобы картинка и текст встали друг с другом*/
+	vertical-align: top;
+
+}
+	
+
+.approch__step{
+	position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: -52px;
+    width: 103px;
+    height: 103px;
+    padding-top: 10px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    text-align: center;
+    font-size: 1.25rem;
+    background-color: #de2b24;
+    color: #fff;
+
+}
+
+	/*пишем номера в красных квадратах. */
+	
+	/*счетчик не сработал.
+	можно разбить на 5 классов: один общий = approch и четыри = approch1,2,3,4
+	и уменьшить код тем самым*/
+
+
+
+.approch__step:before{
+	/*сontent: counter(count); -> счетчик не работает!!??*/
+	/*counter-increment: count; -> счетчик не работает!!??*/
+	content: '1';
+    display: block; /*чтобы в красном квадрате надпись step ушла вниз*/
+    font-family: 'georgia-bold';
+    font-size: 3rem;
+    line-height: 1;
+    color: #fff;
+}
+
+.approch__step-2:before{
+	
+	content: '2';
+    display: block; /*чтобы в красном квадрате надпись step ушла вниз*/
+    font-family: 'georgia-bold';
+    font-size: 3rem;
+    line-height: 1;
+    color: #fff;
+}
+
+.approch__step-3:before{
+	
+	content: '3';
+    display: block; /*чтобы в красном квадрате надпись step ушла вниз*/
+    font-family: 'georgia-bold';
+    font-size: 3rem;
+    line-height: 1;
+    color: #fff;
+}
+
+.approch__step-4:before{
+	
+	content: '4';
+    display: block; /*чтобы в красном квадрате надпись step ушла вниз*/
+    font-family: 'georgia-bold';
+    font-size: 3rem;
+    line-height: 1;
+    color: #fff;
+}
+
+/*делаем только для зеркальных отображений step2 и step4 блоков для каждого 2ого элемента*/
+.approch__step:nth-child(2n){
+	right:auto;
+	left:-52px;
+}
+
+.approch__title{
+	margin-bottom: 6px;
+    font-size: 1.125rem;
+    font-family: "helvatica-neue-bold";
+    font-weight: bold;
+}
+
+.approch__description{
+	margin: 0;/*normalize дает внешние отступы тегу "p". мы их убираем*/
+    line-height: 1.5;
 }
