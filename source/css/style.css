@@ -472,7 +472,14 @@ background-image: url(../images/icons/like.png);
     font-size: 3rem;
     line-height: 1;
     color: #fff;
+   
 }
+
+.approch__step-2, .approch__step-4 {
+	position: absolute;
+	left:-15%; /*сдвинул красные квадраты к левой стороне у блоков step2 и step4*/
+}
+
 
 .approch__step-3:before{
 	
@@ -505,5 +512,6 @@ background-image: url(../images/icons/like.png);
 	margin: 0;/*normalize дает внешние отступы тегу "p". мы их убираем*/
     line-height: 1.5;
 }
+
 
 		/* section Our Work START */
