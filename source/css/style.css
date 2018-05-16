@@ -515,3 +515,74 @@ background-image: url(../images/icons/like.png);
 
 
 		/* section Our Work START */
+
+.work{
+	padding:110px 0;
+	background-color:  #de2b24;
+	color:white;
+}
+
+.work__list{
+	display: flex;
+	flex-wrap: wrap; /*для мобилы адаптива пригодится*/
+	justify-content: center;
+	padding: 0; /*убрал padding у квадратов от normalize, чтобы встали ровно квадраты*/
+
+}
+
+/* сделали нижнюю полоску белым цветом именно для секции WORK */
+.work .title--with-bottom-line:after{
+	background-color: white;
+
+}
+
+
+
+ /*работаем с каждым квадратиком*/
+
+.work__item{
+	width: 256px;/*ширина квадрата*/
+	height: 255px;/*высота квадрата*/
+	color:white;
+	background-color:#f35e59;
+	font-weight: bold;
+}
+
+/*задаем стили для розовых квадратов только с текстом и самолетом*/
+.work__item--name{
+	position: relative;
+    padding: 130px 40px 75px 40px;
+    text-align: center;
+
+}
+
+/*задаю стили только самолетику*/
+.work__item--name:before {
+	content: '';
+    background-image: url(../images/icons/work-item.png);
+    width: 36px;
+    height: 37px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);/*подвинули самолетик в центр*/
+            transform: translateX(-50%);/*подвинули самолетик в центр*/
+    top: 74px;/*расстояние от верха до самолетика*/
+
+}
+
+.work__name{
+	font-size: 1.625rem;
+}
+
+
+.work__picture{
+	width: 100%;/*ширина с изображения в квадратике*/
+	heigt:100%;
+
+}
+
+.work__description{
+	font-size: 1rem;
+}
+
+
