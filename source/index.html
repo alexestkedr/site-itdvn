@@ -176,7 +176,7 @@
 
 
     <section class="work">
-        <div class="container">
+        <div class="container"><!-- нужен блок для центровки -->
 
            <div class="title title--with-bottom-line">
              <h2 class="title title__header">Our Work</h2>
@@ -227,7 +227,7 @@
 
 
     <section class="form-section">
-       <div class="container">
+       <div class="container"><!-- нужен блок для центровки -->
 
          <div class="title">
             <h2 class="title__header">Get Your Free Facebook Analysis Now</h2>
@@ -235,9 +235,9 @@
         </div>
 
         <div class="btn-down">
-            <a class="arrow-down" href="form.html" target="_blank">
+             <a class="arrow-down" href="form.html" target="_blank">
                 <i class="fa fa-angle-down"></i>   
-            </a>
+             </a>
         </div>
 
         <div class="form-container is-hidden">
@@ -268,5 +268,54 @@
        </div><!-- end container form -->
     </section><!-- end form-section -->
 
-</body>
+    <footer class="footer">
+        <div class="footer__top">
+           <div class="container"><!-- нужен блок для центровки -->
+
+              <div class="footer__title">Get in touch</div>
+
+              <div class="footer__links">
+
+               <!--  важно заметить, нужно чтобы теги <i> и <span> соприкасались в начале в иконце,тогда иконки будут ровно стоять и без подчеркиваний -->
+
+                  <a class="footer__social" href="http://facebook.com" target="_blank">
+                      <i class="fab fa-facebook-f" aria-hidden="true"><span class="visually-hidden">facebook-official,twitter,google-plus,linkedin</span></i></a>
+
+                  <a class="footer__social" href="http://twitter.com" target="_blank">
+                      <i class="fab fa-twitter" aria-hidden="true"><span class="visually-hidden">facebook-official,twitter,google-plus,linkedin
+                          </span></i></a>
+
+                <a class="footer__social" href="http://google.com" target="_blank">
+                      <i class="fab fa-google-plus-g" aria-hidden="true"><span class="visually-hidden">facebook-official,twitter,google-plus,linkedin
+                        </span></i></a>
+
+                <a class="footer__social" href="http://linkedin.com" target="_blank">
+                      <i class="fab fa-linkedin-in" aria-hidden="true"><span class="visually-hidden">facebook-official,twitter,google-plus,linkedin
+                      </span></i></a>
+
+            </div><!-- end footer__links -->
+
+            <div class="footer__text">Subscribe to our newsletter to stay update with what is new
+            </div>
+
+<!-- method 'post' тк мы записываем наши данные -->
+             <form action="#" method="post">
+                 <div class="footer__field">
+                     <input class="footer__input" type="email" placeholder="Email Address">
+                </div>
+
+               <button class="button" type="submit">Subscribe</button>
+            </form>
+
+          </div><!-- end container -->
+       </div><!-- end footer__top -->
+
+       <div class="footer__bottom">
+             <div class="footer__copy">Cssauthor.com © 2014 All Rights Reserved
+             </div>
+       </div><!-- end footer__bottom -->
+
+    </footer><!-- end footer -->
+
+  </body>
 </html>

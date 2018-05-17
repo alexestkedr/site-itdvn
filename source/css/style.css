@@ -15,9 +15,15 @@
 /* ПРАВИЛО! если в форме делается кнопка, то чаще всего 
 принято делать ее через <button type="submit">...</button> -->
 
+/* ПРАВИЛО! в Формах всегда делаем кнопку ввиде button class="button" type="submit */
+
+
+
 
 /*  Подключил ЛОКАЛЬНО шрифты @font-face к себе 
 на страницу  */
+
+
 
 @font-face{
 	font-family: 'georgia-bold';
@@ -732,3 +738,126 @@ background-image: url(../images/icons/like.png);
 
 }
 
+/* скрываем форму */
+
+/* этим классом будем манипулировать из JS. 
+Изначальна форма будет скрыта. А по клику - открывалась.
+*/
+.is-hidden{
+	display: none!important;
+}
+
+
+		/* section footer START */
+
+/* скрываем текст у соц.иконок. хороший тон, что
+если иконки не подгрузятся то будет виден текст вместо них*/
+.visually-hidden{
+	text+text-indent: -9999px;
+	font-size:0;
+
+}
+
+.footer__top{
+	padding: 88px 0 83px;
+    text-align: center;
+    background:#2a2a2a;
+} 
+
+.footer__bottom {
+    padding: 26px;
+    text-align: center;
+    background: #515151;
+}
+
+.footer__title{
+	margin-bottom: 31px;/* делаем нижний отступ до иконок */
+    font-size: 1.8125rem;
+    color: #fff;
+    font-family: "helvatica-neue-bold";
+    font-weight: bold
+
+}
+
+/* работаем с ссылками*/
+
+.footer__links{
+	margin-bottom: 53px;/* общему блоку даю нижний отступ разом */
+    color: #fff;
+
+}
+
+.footer__social {
+    margin-left: 20px;
+    padding: 15px;
+    border: 1px solid #515151;
+    border-radius: 3px;
+
+
+}
+
+.footer__social:hover {
+    border: 1px solid #de2b24;
+
+}
+
+
+/* задали всем элементам отступы слева*/
+.footer__social:first-child {
+    margin-left: 0;
+
+}
+
+
+.footer__links .fab {
+    color: #fff;
+
+}
+
+
+.footer__text {
+    margin-bottom: 30px;
+    font-size: 0.875rem;
+    color: #cecece;
+
+}
+
+	/*footer__field - это обертка*/
+.footer__field{
+	width: 67%;
+    margin: 0 auto 27px;
+
+}
+
+/*поработаем с самим input-ом*/
+.footer__input{
+	width: 100%;
+    padding: 20px;
+    font-size: 0.875rem;
+    border: 0;
+    color: #cecece;
+    background: #515151;
+
+}
+
+.footer .button {
+    border: 2px solid #515151;
+    padding: 15px 37px;
+    box-sizing: border-box;
+    font-size: 1.0625rem;
+    font-family: "helvatica-neue-bold";
+    background-color: initial;
+    color: #fff;
+
+}
+
+.footer .button:hover{
+	border:2px solid #de2b24;/*чтобы кнопка не прыгала поставил и здесь border 2px*/
+
+}
+
+.footer__copy{
+	font-size: 0.875rem;
+    color: #cecece;
+
+}
