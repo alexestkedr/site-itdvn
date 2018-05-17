@@ -1,3 +1,4 @@
+
 /* ПРАВИЛО! display: inline-block и vertical-align: top/middle;   
 должны работать в связке ВСЕГДА! 
 блоки ровнее становятся */
@@ -10,6 +11,9 @@
 если текст к примеру в фотошопе видим 26px, то чтобы высчитать
 в rem нужно 26px : 16px = 1.625rem ; 
 Вывод, что 1rem = 16px */
+
+/* ПРАВИЛО! если в форме делается кнопка, то чаще всего 
+принято делать ее через <button type="submit">...</button> -->
 
 
 /*  Подключил ЛОКАЛЬНО шрифты @font-face к себе 
@@ -389,7 +393,6 @@ background-image: url(../images/icons/like.png);
     flex-direction: row-reverse;/*делает зеркальное отображение*/
     text-align: right;
 
-
 }
 
 
@@ -408,14 +411,12 @@ background-image: url(../images/icons/like.png);
 
 }	
 
-
 .approch__picture{
 	display: block;
 	width: 100%;/*чтобы картинка под свой блок подстраивалась*/
 	height: 100%;/*чтобы картинка под свой блок подстраивалась*/
 
 }
-
 
 .approch__image{
 	position: relative;/*родителю дал relative, тк красные квадраты будут относительно нее*/
@@ -520,6 +521,7 @@ background-image: url(../images/icons/like.png);
 	padding:110px 0;
 	background-color:  #de2b24;
 	color:white;
+
 }
 
 .work__list{
@@ -531,11 +533,11 @@ background-image: url(../images/icons/like.png);
 }
 
 /* сделали нижнюю полоску белым цветом именно для секции WORK */
+
 .work .title--with-bottom-line:after{
 	background-color: white;
 
 }
-
 
 
  /*работаем с каждым квадратиком*/
@@ -546,6 +548,7 @@ background-image: url(../images/icons/like.png);
 	color:white;
 	background-color:#f35e59;
 	font-weight: bold;
+
 }
 
 /*задаем стили для розовых квадратов только с текстом и самолетом*/
@@ -553,7 +556,6 @@ background-image: url(../images/icons/like.png);
 	position: relative;
     padding: 130px 40px 75px 40px;
     text-align: center;
-
 }
 
 /*задаю стили только самолетику*/
@@ -578,6 +580,7 @@ background-image: url(../images/icons/like.png);
 .work__picture{
 	width: 100%;/*ширина с изображения в квадратике*/
 	heigt:100%;
+	
 
 }
 
@@ -585,4 +588,146 @@ background-image: url(../images/icons/like.png);
 	font-size: 1rem;
 }
 
+
+		/* section form START */
+
+/*задаем значения для самой главной формы большой */
+.form-section{
+	padding:100px 0 110px 0;/*слева и справа по 0 значения, тк у нас центровщик container выравнивает */
+  	color: #fff;
+    background-color: #1287bf;
+}
+
+.form-section .title{
+	margin-bottom: 12px;
+}
+
+.form-section .title__header{
+	font-size: 2.25rem;
+}
+
+.form-section .title__text{
+	font-size: 1.25rem;
+}
+
+
+/* стилизуем кнопку в ввиде стрелки */
+
+.form-section .btn-down{
+	position: relative;/*родителю дал relative, чтобы сама стрелочка потом была absolute и встала по центру */
+    margin: auto auto 20px;
+    width: 65px;/* ширина белоло кольца */
+    height: 65px;/* высота белоло кольца */
+    border: 2px solid #fff;
+    border-radius: 50%;
+	
+}
+
+.form-section .arrow-down{
+	position: absolute;/* чтобы выровнить стрелку в колцье по центру */
+    left: 50%;/* центруем стрелку по горнизонтале */
+    top: 50%; центруем стрелку по вертикале 
+    -webkit-transform: translate(-50%, -50%);/* центруем стрелку и по горнизонтале и вертикале */
+            -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+    padding: 20px;
+    color: #fff;
+}
+
+ /*сделал вложенность, иначе бы применил значение ко всем иконкам на странице */
+.form-section .arrow-down .fa {
+    font-size: 2.5rem;
+}
+
+/* стилизуем саму форму белую */
+
+.form {
+    position: relative;/* родителю дали relative, тк "треугольник" и "крестик" будет absolute */
+    width: 67%;/*ширина самой формы */
+    margin: auto;
+    padding: 50px 50px 66px 50px;/* увеличи поля белой формы */
+    border-radius: 3px;
+    color: #828282;/* цвет текста */
+    text-align: center;/* делаем текст по центру */
+    background-color: white;
+
+}
+
+.form-container{
+	padding-top: 30px;/* нужно чтобы не заезжать на треугольник белый */
+
+}
+
+/* делаем белый треугольник */
+.form:before{
+	content: '';
+	position: absolute;
+    left: 50%;/* центрируем по горизонтали */
+    top: -59px;/* подняли вверх треугольник */
+    -webkit-transform: translateX(-50%);/* центрируем по горизонтали */
+            transform: translateX(-50%);/* центрируем по горизонтали */
+    border: 30px solid transparent;
+    border-bottom: 30px solid #ffffff;
+    
+}
+
+/* делаем крестик*/
+
+.form__close-button{
+	position: absolute;
+    right: -16px;/*смещаем крестик на угол по горизотале */
+    top: -22px;/*смещаем крестик на угол по вертикале */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;/* цвет крестика*/
+    background: #de2b24;
+    transition: 0.3s;/* нужен, чтобы при наведении на крестик был плавный переход*/
+
+}
+
+.form__close-button:hover{
+	background-color: #FD4A43;
+
+}
+
+/* делаем красную кнопку submit */
+
+.button{
+	padding: 15px 30px;
+    border: none;/* убрал, тк у кнопки по умолчанию есть некрасивый border */
+}
+
+.form__text{
+	margin-bottom: 33px;/* расстояние от текста до начала полей ввода */
+    font-size: 0.9375rem;
+    line-height: 1.5;
+
+}
+
+.form__fields{
+	margin-bottom:36px;/* красную кнопку опустили вниз */
+
+}
+
+/* работаем с полями ввода */
+.form__input{
+	width: 76%;
+    display: block;
+    margin: auto auto 8px auto;/* нижний отступ м/у полями */
+    padding: 18px 20px;
+    border: 1px solid #d8d8d8;
+    border-radius: 3px;
+    font-size: 0.875rem;/* размер текста ввода в эти поля */
+
+}
+
+/* задали тень в блоке ввода при печатании */
+.form__input:focus{
+	box-shadow: 0 0 8px 1px rgba(0,0,0,0.5);
+
+}
 
