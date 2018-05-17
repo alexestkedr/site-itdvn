@@ -626,7 +626,7 @@ background-image: url(../images/icons/like.png);
 .form-section .arrow-down{
 	position: absolute;/* чтобы выровнить стрелку в колцье по центру */
     left: 50%;/* центруем стрелку по горнизонтале */
-    top: 50%; центруем стрелку по вертикале 
+    top: 50%; /*центруем стрелку по вертикале*/ 
     -webkit-transform: translate(-50%, -50%);/* центруем стрелку и по горнизонтале и вертикале */
             -webkit-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%);
@@ -637,6 +637,7 @@ background-image: url(../images/icons/like.png);
  /*сделал вложенность, иначе бы применил значение ко всем иконкам на странице */
 .form-section .arrow-down .fa {
     font-size: 2.5rem;
+
 }
 
 /* стилизуем саму форму белую */
