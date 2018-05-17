@@ -367,7 +367,9 @@ background-image: url(../images/icons/like.png);
     height: 79px;
 }
 
+
 			/* section Approch START */
+
 
 
 .approch{
@@ -860,4 +862,203 @@ background-image: url(../images/icons/like.png);
 	font-size: 0.875rem;
     color: #cecece;
 
+}
+
+		/*MEDIA-QUIRIES START */
+
+/*примерно на 1080px начинается ломатсья сайт*/
+
+
+	
+/* логотип и кнопку сдвинули от краев */
+@media (max-width: 1060px) {
+
+	.button-red {
+  	    margin-right:10px;
+ }
+
+	.logo {
+	  	margin-left:10px;	
+ }
+}
+
+
+@media (max-width: 1024px) {
+
+   .header__bottom{
+	flex-direction: column;}
+
+   .logo{
+	margin-left:0;
+	margin-bottom:15px;
+
+ }
+}
+	
+
+@media (max-width: 1024px) {
+	.nav{margin-bottom: 25px; 
+
+ }
+}
+
+
+/* подвинуди третий блок 'Ads management' в центр под двумя выше */
+@media (max-width: 800px) {
+
+.about__item{
+	width: 50%;
+	margin-bottom:15px;
+	padding: 5px;
+	box-sizing: border-box;
+
+ }
+}
+
+@media (max-width: 800px){
+
+.about__list{
+	justify-content: center;
+	padding: 0 25px;
+
+ }
+}
+
+
+@media (max-width: 565px) {
+	.about__item{
+		width:100%;
+		padding: 0;
+		margin-bottom: 0;
+
+	}
+}
+
+
+ 		/*-- SECTION Approch START */
+
+
+@media (max-width: 770px){
+
+	.approch__text{
+		padding: 25px 28px; /*padding для 2ого элемента зеркадьного*/
+	
+ }
+}
+
+
+
+/* уменьшим изображения */
+
+@media (max-width: 770px) {
+
+.approch__image{
+	max-width: calc(340px / 1.5);
+	max-height: calc(236px / 1.5);
+ }
+}
+
+
+
+/* скрываем красн квадраты step */
+@media (max-width: 770px) {
+
+.approch__step{
+	display: none;
+
+ } 
+}
+
+
+@media (max-width: 700px) {
+
+.approch__image{
+	margin:auto;
+	display: block;
+	
+ }
+}
+
+@media (max-width: 700px) {
+
+.approch__text{
+	width: 100%;
+	text-align: center;
+
+ }
+}
+
+/*отключили дисплэй флекс, чтобы изображения шли в колонку*/
+@media (max-width: 700px) {
+
+	.approch__item:nth-child(2n){
+		display: block;
+ }
+}
+
+
+@media (max-width: 700px) {
+
+	.approch{
+		padding-bottom: 20px;
+		padding-top: 20px; 
+
+ }
+}
+
+@media (max-width: 700px) {
+
+	.approch__item{
+		padding:25px 20px;
+
+ }
+}
+
+
+@media (max-width: 700px) {
+
+	.approch__title{
+		margin-bottom: 35px;
+	
+ }
+}
+
+/* уменьшили размер текста. на мобиле и планшете крупный шрифт не нужен*/
+@media (max-width: 600px) {
+
+   html{
+	font-size: 14px;
+	
+ }
+
+}
+
+@media (max-width: 960px) {
+
+   .about{
+		padding: 40px 0 40px 0;
+	
+ }
+}
+
+
+		
+/*-- section work застили  */
+@media (max-width: 770px) {
+
+   .work{
+   	padding-top: 30px;
+   	padding-bottom: 30px;
+		
+ }
+}
+
+/*-- уменьшили секцию hero */
+@media (max-width: 599px) {
+
+   .hero{
+   	padding: 100px 20px;
+   	min-height:inherit;
+		
+ }
 }
