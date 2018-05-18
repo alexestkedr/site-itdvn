@@ -199,8 +199,7 @@ text-decoration: underline;
 .nav{
 	display: inline-block;/* чтобы отступы м.б.задать */
 	vertical-align: top; /* когда задаю inline-block всегда в связке прописывать vertical-align: top или middle */
-	padding-top: 7px;
-	margin-left: 90px;
+	margin-left: 100px;
 	
 }
 
@@ -211,6 +210,7 @@ text-decoration: underline;
 	font-family: 'helvetica-neue-bold';
 	text-decoration:none;
 	color: #424242;
+	font-size: 1rem;
 	transition: 0.3s;/* чтобы при наведении на ссылку медленно сменялся цвет */
 
 }
@@ -290,13 +290,13 @@ text-decoration: underline;
 }
 
 .about__item{
-	width: 25%;/* ширина для блока */
+	width: 29%;/* ширина для блока */
 }
 
 
 
 .about__header{
-	margin:0 0 12px 0;
+	margin:0 0 6px 0;
 	font-size:1.375rem;
 	font-family: 'helvetica-neue-bold';
 	color:#424242;
@@ -312,7 +312,7 @@ text-decoration: underline;
 }
 
 .title{
-	margin-bottom:65px;
+	margin-bottom:63px;
 	text-align: center;
 }
 
@@ -1015,12 +1015,10 @@ background-image: url(../images/icons/like.png);
  }
 }
 
-@media (max-width: 985px) {
+@media (max-width: 985px){
 
-	.approch__item{
-		padding-bottom: 20px;
-		padding-top: 20px; 
-
+.approch__item {
+    padding: 26px 29px;
  }
 }
 
@@ -1032,6 +1030,7 @@ background-image: url(../images/icons/like.png);
 	
  }
 }
+
 
 /* уменьшили размер текста. на мобиле и планшете крупный шрифт не нужен*/
 @media (max-width: 600px) {
@@ -1109,7 +1108,7 @@ background-image: url(../images/icons/like.png);
 
     .nav__link{
    		display: block;	/*-- каждая ячейчка меню шла колонкой */
-   		margin:0 50px 0 0;/*-- выровнял список меню по центру */
+   		
  }
 	.nav__link:after{
 		display: none;/*-- скрыли точки у каждой ячейки меню */
@@ -1120,4 +1119,13 @@ background-image: url(../images/icons/like.png);
     }
 
 }
+
+@media (max-width: 1030px) {
+
+   .nav{
+   		margin-left:0;
+		
+ }
+}
+
 
