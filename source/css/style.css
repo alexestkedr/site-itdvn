@@ -643,7 +643,7 @@ background-image: url(../images/icons/like.png);
     -webkit-transform: translate(-50%, -50%);/* центруем стрелку и по горнизонтале и вертикале */
             -webkit-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%);
-    padding: 20px;
+    padding: 20px;/*чтобы больше было площади кликать по стрелке*/
     color: #fff;
 }
 
